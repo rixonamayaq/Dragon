@@ -657,8 +657,8 @@
                 "text": "Navegador Web"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -755,9 +755,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "e4ff7278-9c62-4c69-a01b-3cb77c1ee6c9",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -1260,57 +1278,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "https",
-              "threats": []
-            },
-            "labels": [
-              "Request"
-            ],
-            "id": "ea91ac3c-797d-4877-83ec-fb51795a8125",
-            "source": {
-              "cell": "558aa86a-e4b0-4df8-930c-369e0330c851",
-              "port": "83c9c412-0770-4170-8ca0-5501c76632fe"
-            },
-            "target": {
-              "cell": "6afaa964-c086-435a-b9ae-b99fdf5fbdc9",
-              "port": "3be664e8-3883-438a-a185-b4b5297a9d65"
-            },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 270
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Response",
               "description": "",
               "outOfScope": false,
@@ -1341,6 +1308,77 @@
                 "y": 340
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "https",
+              "threats": [
+                {
+                  "id": "1cc0c727-3f7d-45bd-a787-5d6d1f0dcaca",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Request"
+            ],
+            "id": "ea91ac3c-797d-4877-83ec-fb51795a8125",
+            "source": {
+              "cell": "558aa86a-e4b0-4df8-930c-369e0330c851",
+              "port": "83c9c412-0770-4170-8ca0-5501c76632fe"
+            },
+            "target": {
+              "cell": "6afaa964-c086-435a-b9ae-b99fdf5fbdc9",
+              "port": "3be664e8-3883-438a-a185-b4b5297a9d65"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 270
+              }
+            ]
           }
         ],
         "description": "descripcion"
@@ -1348,6 +1386,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "NA",
-    "threatTop": 2
+    "threatTop": 5
   }
 }
